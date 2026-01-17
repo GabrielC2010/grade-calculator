@@ -143,7 +143,7 @@ def get_wisdom(final_grade, improvement_rate):
     elif final_grade >= 80:
         response = random.choice([
             "This is a moment, not a message about your future. A single number cannot explain a whole life. Focus on balance, work honestly, rest intentionally, and trust the process.",
-            "You're somewhere in the middle, and that's okay. Most of life is lived there. A "B" letter grade doesn't shape you nor determine your worth. Stay consistent, stay kind to yourself, and keep perservering.",
+            "You're somewhere in the middle, and that's okay. Most of life is lived there. A 'B' letter grade doesn't shape you nor determine your worth. Stay consistent, stay kind to yourself, and keep perservering.",
             "It's a decent grade, but don't stress too much. Go outside, hang with friends, or do something creative—life is more than scores.",
             "You're doing okay, and that's enough to build on. You tried your best, now take time to relax and enjoy life."
         ])
@@ -201,6 +201,7 @@ def index():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
+
 
 
 
