@@ -86,6 +86,8 @@ def calculate_grade(raw_file, extra_grade = ""):
     #Other stats
     num_scores = len(percentages)
     average_grade = sum(percentages) / len(percentages) if percentages else 0
+
+    ec_help = 0
     if total_points > 0:
         ec_help = (grade_points/total_points - (grade_points-extra_credit_points)/total_points) * 100
 
@@ -199,5 +201,6 @@ def index():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
+
 
 
