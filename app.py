@@ -115,8 +115,9 @@ def calculate_grade(raw_file, extra_grade = ""):
 
 def get_wisdom(final_grade, improvement_rate):
     response = ""
-
-    if final_grade >= 95:
+    if final_grade >= 115:
+        reponse = "You probably cheated"
+    elif final_grade >= 95:
         response = random.choice([
             "You did well, and it is okay to be grateful for that! Still, remember that your worth is never defined by grades, but rather, you personality and who you are as a person. Give thanks, stay humble, and do not forget to live, love, and serve beyond the classroom.",
             "Excellence feels good, but it is not the goal of life. Even Scripture reminds us that wisdom without love is empty. Enjoy your success, but do not build your identity on achievement, build it on who you are becoming.",
@@ -201,6 +202,7 @@ def index():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
+
 
 
 
