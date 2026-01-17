@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; }
+        textarea { width: 100%; height: 300px; margin-bottom: 10px; }
+        input[type="text"] { width: 100px; padding: 5px; margin-bottom: 10px; }
+        input[type="submit"] { padding: 10px 20px; font-size: 16px; }
+        .result { margin-top: 20px; font-size: 18px; font-weight: bold; }
 
+        /* Button styling */
+        #wisdomMessage { 
+            margin-top:20px; 
+            font-size: 18px; 
+            font-weight: bold; 
+            background-color: white;   /* same clean white as your textareas */
+            padding: 10px;             /* match spacing style */
+            border: 1px solid #ddd;    /* subtle border to match the page style */
+            border-radius: 4px;
+        }
+
+        #showWisdomBtn { 
+            padding: 15px 30px;  /* bigger than submit button */
+            font-size: 18px;      /* larger text */
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;     /* space from previous content */
+        }
+    </style>
+</head>
+<body>
+    <h1>Grade Calculator</h1>
+    <form method="POST">
+        <label>Copy and paste your entire Powerschool grades here:</label><br>
+        <textarea name="raw_file" placeholder="Paste here...">{{raw_file}}</textarea>
+        <br>
+        <label>Add new grade (optional):</label><br>
+        <input type="text" name="extra_grade" placeholder="eg. 10/10">
+        <br>
+        <input type="submit" value="Calculate Grade">
+    </form>
+    {% if result %}
+    <div class="result">
+        {{ result|safe }}
+    </div>
+    <div class="wisdom-section">
+    <button id="showWisdomBtn">View Words of Wisdom</button>
+    <div id="wisdomMessage" style="display:none; margin-top:10px; font-weight:600; font-size:16px;">
+        {{ wisdom }}
+    </div>
+    {% endif %}
+
+</div>
+</select>
+</body>
+</html>
+
+<script>
+const btn = document.getElementById("showWisdomBtn");
+const msg = document.getElementById("wisdomMessage");
+
+if (btn && msg) {
+    btn.addEventListener("click", function() {
+        if (msg.style.display === "none") {
+            msg.style.display = "block";
+            this.textContent = "Hide Words of Wisdom";
+        } else {
+            msg.style.display = "none";
+            this.textContent = "View Words of Wisdom";
+        }
+    });
+}
+</script>
