@@ -116,41 +116,41 @@ def get_wisdom(final_grade, improvement_rate):
 
     if final_grade >= 95:
         response = random.choice([
-            "You did well, and it is okay to be grateful for that. Still, remember that your worth was never earned by effort, it was given by God long before this grade existed. Give thanks, stay humble, and do not forget to live, love, and serve beyond the classroom.",
+            "You did well, and it is okay to be grateful for that! Still, remember that your worth is never defined by grades, but rather, you personality and who you are as a person. Give thanks, stay humble, and do not forget to live, love, and serve beyond the classroom.",
             "Excellence feels good, but it is not the goal of life. Even Scripture reminds us that wisdom without love is empty. Enjoy your success, but do not build your identity on achievement, build it on who you are becoming.",
             "You're at the top right now, but don't let it make you forget life exists outside of school. Hang out with friends, explore hobbies, and make memories while you can.",
-            "It's easy to get caught up in perfection, but the best moments come from curiosity and adventure, not just grades. Celebrate this win, then go live a little."
+            "It's easy to get caught up in perfection, but the best moments come from curiosity and adventure, not just grades. Celebrate this win, then go have fun and enjoy life."
         ])
 
     elif final_grade >= 90:
         response = random.choice([
-            "This reflects discipline and responsibility, gifts that matter far beyond school. Life will not ask how perfect you were—it will ask how faithful you were. Rest sometimes, laugh often, and remember you are more than what you produce.",
+            "This reflects discipline and responsibility, gifts that matter far beyond school. Life will not ask how perfect you were—it will ask how faithful you were. Rest sometimes, enjoy life, and remember you are more than what grades say you are.",
             "You're clearly capable, and that's something to be proud of. Just don't let chasing perfection stop you from enjoying the bigger picture.",
-            "You're doing well, but grades don't make life fun. Make sure to spend time with friends, explore your passions, and have moments just for yourself.",
-            "Strong work now is good, but don't forget that high school is temporary. Balance studying with activities that actually make you happy."
+            "You're doing well, but grades are only temporary. Spend time with friends, explore your passions, and have moments just to be yourself and enjoy life.",
+            "Strong work now is good, but don't forget that there is an end to high school...and an end to life. Balance studying with things that give you joy."
         ])
 
     elif final_grade >= 85:
         response = random.choice([
             "This shows growth, not completion. Life is less about reaching a score and more about walking a path. Keep learning, but do not rush past the moments that shape your heart.",
             "You're doing well, even if it does not feel extraordinary. Quiet progress still matters. Invest in people and character as much as results.",
-            "You're getting there, but don't let school take up your whole life. Try new clubs, sports, or hobbies—you'll be grateful later.",
+            "You're getting there, but don't let school take up your whole life. Try new things and explore the curiosity—you will never regret this.",
             "Grades are only one part of the story. Build friendships, learn skills, and enjoy the experiences that grades can't measure."
         ])
 
     elif final_grade >= 80:
         response = random.choice([
             "This is a moment, not a message about your future. A single number cannot explain a whole life. Focus on balance, work honestly, rest intentionally, and trust the process.",
-            "You're somewhere in the middle, and that's okay. Most of life is lived there. Stay consistent, stay kind to yourself, and keep perspective.",
+            "You're somewhere in the middle, and that's okay. Most of life is lived there. A "B" letter grade doesn't shape you nor determine your worth. Stay consistent, stay kind to yourself, and keep perservering.",
             "It's a decent grade, but don't stress too much. Go outside, hang with friends, or do something creative—life is more than scores.",
-            "You're doing okay, and that's enough to build on. Take time for yourself too, whether that's sports, music, or just relaxing."
+            "You're doing okay, and that's enough to build on. You tried your best, now take time to relax and enjoy life."
         ])
 
     elif final_grade >= 75:
         response = random.choice([
-            "It's okay to feel disappointed, but don't confuse struggle with failure. Even Scripture is full of imperfect people still called for purpose. Learn what you can, then place the rest in God's hands.",
-            "This grade doesn't close doors—it just slows you down for reflection. Adjust your habits, ask for help, and keep moving forward without shame.",
-            "You're not failing at life—just facing a challenge. Use it to learn, but don't let it consume your happiness or social life.",
+            "It's okay to feel disappointed, but don't confuse struggle with failure. The world is full of imperfect people who are still called for a purpose on planet Earth. Learn what you can, do what you can, then place the rest in God's hands.",
+            "This grade doesn't close doors—it just slows you down for reflection. Adjust your habits, ask for help, try your best, and most important, keep moving forward without shame.",
+            "You're not failing yourself—just facing one of many challenges that life will continously throw at you. Use it to learn, but don't let it consume your happiness or life outside of school.",
             "It's a wake-up call, not a punishment. Try new strategies, get help if you need it, and remember to enjoy the little things outside school."
         ])
 
@@ -158,8 +158,8 @@ def get_wisdom(final_grade, improvement_rate):
         response = random.choice([
             "This might sting, but it says nothing about your value. God never loved you more when you succeeded or less when you struggled. Be patient with yourself and take the next right step.",
             "You're not falling behind in life—just being reminded you're human. Pause, reflect, and trust that growth often comes quietly.",
-            "It's not great, but it's fixable. Ask for help, make a plan, and don't forget to take breaks and have fun with friends.",
-            "One low grade isn't the end. Focus on what you can control, like effort and habits, and still make time to enjoy yourself."
+            "It's not great, but it's not the end. Ask for help, make a plan, study hard, have fun and enjoy life with friends.",
+            "One mediocre grade isn't the end. Focus on what you can control, and just trust the process."
         ])
 
     else:
@@ -167,7 +167,7 @@ def get_wisdom(final_grade, improvement_rate):
             "This hurts, and that's okay. But your purpose was never hidden in a report card. God's plans do not fail because of a bad grade. Breathe, regroup, and trust that this moment is not the end of your story.",
             "Years from now, this number will fade—but who you became through adversity will remain. Seek wisdom, ask for guidance, and do not let temporary failure steal eternal perspective.",
             "It's a rough grade, but it doesn't define you. Take a deep breath, ask for help, and remember there's more to life than school.",
-            "A bad grade is just feedback, not failure. Learn from it, adjust your approach, and still make time for the things that make you happy."
+            "A bad grade is just feedback, not failure. Learn from it, adjust your approach, and spend time with the people and things that make you happy. Always remember that school, whether going well or not, is just an experience. Cherish it and enjoy life while you still can."
         ])
 
     return response
@@ -199,4 +199,5 @@ def index():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
+
 
